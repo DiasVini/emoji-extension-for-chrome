@@ -1,0 +1,14 @@
+{
+
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "Special Char",
+  "description": "Copia de caracteres especiais",
+  "author": "Vinicius Dias",
+  "browser_action": {
+    "default_title": "Special Chars",
+    "default_popup": "index.html",
+    "default_icon": "images/icon-star.png"
+  }
+
+}
