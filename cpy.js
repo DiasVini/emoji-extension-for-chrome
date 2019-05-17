@@ -1,7 +1,12 @@
 createList();
+document.getElementById("myRange").addEventListener("change", function () {
+   resizeFont();
+   var val = document.getElementById("selectorValue");
+   val.innerText = document.getElementById("myRange").value;
+});
 
 
-function setClickable() {
+function setClicable() {
     var li = document.getElementsByTagName("a");
     for (var i = 0; i < li.length; i++) {
         li[i].addEventListener("click", function () {
@@ -111,9 +116,17 @@ function createList() {
 
         ahref.innerText = String.fromCodePoint(charList[i]);
         ahref.href = "#";
+        ahref.classList  ="icon";
         li.appendChild(ahref);
         ulist.appendChild(li);
     }
 
-    setClickable();
+    setClicable();
+}
+
+function resizeFont(){
+    var ahref = document.getElementsByClassName("icon");
+    for(alist of ahref){
+    alist.style.fontSize = document.getElementById("myRange").value +"px";
+        }
 }

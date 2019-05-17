@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Hello World</title>
     <style>
         li{
             list-style: none;
 
-            padding: 2px;
-            margin: 2px;
+            padding: 3px;
+            margin: 3px;
         }
         li>a{
-            font-size: 15px;
+            font-size: 18px;
             text-decoration: none;
         }
         ul li{
@@ -20,11 +21,47 @@
         ul{
             padding-inline-start: 0 !important;
             width: 400px !important;
-            height: 300px;
+            height: 326px;
         }
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+
+        }
+
     </style>
 </head>
-<h3>Select e Copy</h3>
+<h3>Clique no emoji escolhido e ele estará pronto pra colar</h3>
+<div>selecione o Tamanho da fonte:</div>
+<div class="slidecontainer">
+    <input type="range" min="1" max="100" value="18" class="slider" id="myRange" >
+</div>
+<div class="font-size"><small>tamanho da fonte:<span id="selectorValue">18</span>px</small></div>
 <ul id="ulist" onload="createList()">
 
 </ul>
