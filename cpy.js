@@ -1,7 +1,7 @@
 createList();
 
 
-function setClicable() {
+function setClickable() {
     var li = document.getElementsByTagName("a");
     for (var i = 0; i < li.length; i++) {
         li[i].addEventListener("click", function () {
@@ -115,5 +115,5 @@ function createList() {
         ulist.appendChild(li);
     }
 
-    setClicable();
+    setClickable();
 }
