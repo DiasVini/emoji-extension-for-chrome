@@ -15,6 +15,11 @@ function setClicable() {
             range.selectNode(this);
             window.getSelection().addRange(range);
             document.execCommand('copy');
+            chrome.tabs.executeScript( {
+                code: "document.activeElement.value  += '" + this.innerHTML+"'"
+            }, function(selection) {
+              
+            });
         });
     }
 }

@@ -5,6 +5,12 @@
   "name": "Special Char",
   "description": "Copia de caracteres especiais",
   "author": "Vinicius Dias",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "http://*/",
+    "https://*/"
+  ],
   "browser_action": {
     "default_title": "Special Chars",
     "default_popup": "index.html",
